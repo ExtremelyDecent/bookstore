@@ -23,11 +23,10 @@ beforeEach(async() =>{
                 'Hank',
                 'English',
                 100,
-                'Publisher publishers'
+                'Publisher publishers',
                 'Test Book',
                 2023)
-            RETURNING isbn
-            `
+            RETURNING isbn`
         );
         book_isbn = result.rows[0].isbn
 });
@@ -137,11 +136,9 @@ describe("DELETE /books/:id", function () {
     });
 });
   
-  
 afterEach(async function () {
     await db.query("DELETE FROM BOOKS");
 });
-
 
 afterAll(async function () {
     await db.end();

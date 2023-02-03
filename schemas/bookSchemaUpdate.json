@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "definitions": {},
+   	"type": "object",
+            
+    "properties": {
+        "isbn": {
+            "$id": "#/properties/isbn-10",
+            "type": "string"
+        },
+        "amazon_url": {
+            "$id": "#/properties/amazon-url",
+            "type": "string",
+            "format": "uri",
+            "qt-uri-protocols": [
+                "http"
+            ]
+        },
+        "author": {
+            "$id": "#/properties/author",
+            "type": "string"
+        },
+        "language": {
+            "$id": "#/properties/language",
+            "type": "string"
+        },
+        "pages": {
+            "$id": "#/properties/pages",
+            "type": "integer",
+            "default": 0
+        },
+        "publisher": {
+            "$id": "#/properties/publisher",
+            "type": "string"
+        },
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string"
+            
+        },
+        "year": {
+            "$id": "#/properties/year",
+            "type": "integer",
+            "default": 0
+        }
+    },
+    "required": [
+        "author",
+        "language",
+        "pages",
+        "title",
+        "year"
+    ],
+    "title": "BookSchemaUpdate"
+}
